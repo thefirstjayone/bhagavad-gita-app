@@ -1,0 +1,572 @@
+[
+  {
+    "chapter": 2,
+    "verse": 11,
+    "sanskrit": "श्रीभगवानुवाच\nअशोच्यानन्वशोचस्त्वं प्रज्ञावादांश्च भाषसे ।\nगतासूनगतासूंश्च नानुशोचन्ति पण्डिताः ॥ ११ ॥",
+    "iast": "śrī-bhagavān uvāca\naśocyān anvaśocas tvaṁ prajñā-vādāṁś ca bhāṣase |\ngatāsūn agatāsūṁś ca nānuśocanti paṇḍitāḥ || 11 ||",
+    "phonetic": "shree-bhagavaan uvaacha\nashochyaan anvashocas tvam prajnaa-vaadaamsh ca bhaashase |\ngataasoon agataasoomsh ca naanushocanti panditaah || 11 ||",
+    "trans1905": "The Blessed Lord said: Thou grievest for those that should not be grieved for, yet speakest words of wisdom. The wise grieve neither for the living nor for the dead.",
+    "transModern": "The Supreme Lord said: While speaking learned words, you are mourning for what is not worthy of grief. Those who are wise lament neither for the living nor for the dead.",
+    "words": [
+      {
+        "sa": "श्रीभगवान् उवाच",
+        "iast": "śrī-bhagavān uvāca",
+        "ph": "shree-bhagavaan uvaacha",
+        "m": "the Blessed Lord said"
+      },
+      {
+        "sa": "अशोच्यान्",
+        "iast": "aśocyān",
+        "ph": "ashochyaan",
+        "m": "that should not be grieved for"
+      },
+      {
+        "sa": "अन्वशोचः",
+        "iast": "anvaśocaḥ",
+        "ph": "anvashocah",
+        "m": "thou hast grieved"
+      },
+      {
+        "sa": "त्वम्",
+        "iast": "tvam",
+        "ph": "tvam",
+        "m": "thou"
+      },
+      {
+        "sa": "प्रज्ञा-वादान्",
+        "iast": "prajñā-vādān",
+        "ph": "prajnaa-vaadaan",
+        "m": "words of wisdom"
+      },
+      {
+        "sa": "च",
+        "iast": "ca",
+        "ph": "ca",
+        "m": "and"
+      },
+      {
+        "sa": "भाषसे",
+        "iast": "bhāṣase",
+        "ph": "bhaashase",
+        "m": "talkest"
+      },
+      {
+        "sa": "गतासून्",
+        "iast": "gatāsūn",
+        "ph": "gataasoon",
+        "m": "dead (whose life is gone)"
+      },
+      {
+        "sa": "अगतासून्",
+        "iast": "agatāsūn",
+        "ph": "agataasoon",
+        "m": "living (whose life is not gone)"
+      },
+      {
+        "sa": "च",
+        "iast": "ca",
+        "ph": "ca",
+        "m": "and"
+      },
+      {
+        "sa": "न",
+        "iast": "na",
+        "ph": "na",
+        "m": "not"
+      },
+      {
+        "sa": "अनुशोचन्ति",
+        "iast": "anuśocanti",
+        "ph": "anushocanti",
+        "m": "grieve"
+      },
+      {
+        "sa": "पण्डिताः",
+        "iast": "paṇḍitāḥ",
+        "ph": "panditaah",
+        "m": "the wise / learned"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 12,
+    "sanskrit": "न त्वेवाहं जातु नासं न त्वं नेमे जनाधिपाः ।\nन चैव न भविष्यामः सर्वे वयमतः परम् ॥ १२ ॥",
+    "iast": "na tv evāhaṁ jātu nāsaṁ na tvaṁ neme janādhipāḥ |\nna caiva na bhaviṣyāmaḥ sarve vayam ataḥ param || 12 ||",
+    "phonetic": "na tv evaaham jaatu naasam na tvam neme janaadhipaah |\nna caiva na bhavishyaamah sarve vayam atah param || 12 ||",
+    "trans1905": "Nor at any time verily was I not, nor thou, nor these rulers of men, nor verily shall we ever cease to be, all of us hereafter.",
+    "transModern": "Never was there a time when I did not exist, nor you, nor all these kings; nor in the future shall any of us cease to be.",
+    "words": [
+      {
+        "sa": "न",
+        "iast": "na",
+        "ph": "na",
+        "m": "not"
+      },
+      {
+        "sa": "तु",
+        "iast": "tu",
+        "ph": "tu",
+        "m": "indeed / verily"
+      },
+      {
+        "sa": "एव",
+        "iast": "eva",
+        "ph": "eva",
+        "m": "also / alone"
+      },
+      {
+        "sa": "अहम्",
+        "iast": "aham",
+        "ph": "aham",
+        "m": "I"
+      },
+      {
+        "sa": "जातु",
+        "iast": "jātu",
+        "ph": "jaatu",
+        "m": "at any time"
+      },
+      {
+        "sa": "न",
+        "iast": "na",
+        "ph": "na",
+        "m": "not"
+      },
+      {
+        "sa": "आसम्",
+        "iast": "āsam",
+        "ph": "aasam",
+        "m": "was"
+      },
+      {
+        "sa": "त्वम्",
+        "iast": "tvam",
+        "ph": "tvam",
+        "m": "thou"
+      },
+      {
+        "sa": "इमे",
+        "iast": "ime",
+        "ph": "ime",
+        "m": "these"
+      },
+      {
+        "sa": "जनाधिपाः",
+        "iast": "janādhipāḥ",
+        "ph": "janaadhipaah",
+        "m": "rulers of men / kings"
+      },
+      {
+        "sa": "च",
+        "iast": "ca",
+        "ph": "ca",
+        "m": "and"
+      },
+      {
+        "sa": "न",
+        "iast": "na",
+        "ph": "na",
+        "m": "not"
+      },
+      {
+        "sa": "भविष्यामः",
+        "iast": "bhaviṣyāmaḥ",
+        "ph": "bhavishyaamah",
+        "m": "shall be / exist"
+      },
+      {
+        "sa": "सर्वे",
+        "iast": "sarve",
+        "ph": "sarve",
+        "m": "all"
+      },
+      {
+        "sa": "वयम्",
+        "iast": "vayam",
+        "ph": "vayam",
+        "m": "we"
+      },
+      {
+        "sa": "अतः परम्",
+        "iast": "ataḥ param",
+        "ph": "atah param",
+        "m": "hereafter"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 13,
+    "sanskrit": "देहिनोऽस्मिन्यथा देहे कौमारं यौवनं जरा ।\nतथा देहान्तरप्राप्तिर्धीरस्तत्र न मुह्यति ॥ १३ ॥",
+    "iast": "dehino ’smin yathā dehe kaumāraṁ yauvanaṁ jarā |\ntathā dehāntara-prāptir dhīras tatra na muhyati || 13 ||",
+    "phonetic": "dehino smin yathaa dehe kaumaaram yauvanam jaraa |\ntathaa dehaantara-praaptir dheeras tatra na muhyati || 13 ||",
+    "trans1905": "As the dweller in the body experienceth in the body childhood, youth, old age, so passeth he on to another body; the steadfast one grieveth not thereat.",
+    "transModern": "Just as the embodied soul continuously passes in this body from childhood to youth to old age, it similarly passes into another body at death. The wise are not bewildered by this.",
+    "words": [
+      {
+        "sa": "देहिनः",
+        "iast": "dehinaḥ",
+        "ph": "dehinah",
+        "m": "of the embodied (soul)"
+      },
+      {
+        "sa": "अस्मिन्",
+        "iast": "asmin",
+        "ph": "asmin",
+        "m": "in this"
+      },
+      {
+        "sa": "यथा",
+        "iast": "yathā",
+        "ph": "yathaa",
+        "m": "as / just as"
+      },
+      {
+        "sa": "देहे",
+        "iast": "dehe",
+        "ph": "dehe",
+        "m": "in body"
+      },
+      {
+        "sa": "कौमारम्",
+        "iast": "kaumāram",
+        "ph": "kaumaaram",
+        "m": "childhood"
+      },
+      {
+        "sa": "यौवनम्",
+        "iast": "yauvanam",
+        "ph": "yauvanam",
+        "m": "youth"
+      },
+      {
+        "sa": "जरा",
+        "iast": "jarā",
+        "ph": "jaraa",
+        "m": "age / decay"
+      },
+      {
+        "sa": "तथा",
+        "iast": "tathā",
+        "ph": "tathaa",
+        "m": "so / similarly"
+      },
+      {
+        "sa": "देहान्तर-प्राप्तिः",
+        "iast": "dehāntara-prāptiḥ",
+        "ph": "dehaantara-praaptih",
+        "m": "the obtaining of another body"
+      },
+      {
+        "sa": "धीरः",
+        "iast": "dhīraḥ",
+        "ph": "dheerah",
+        "m": "the steadfast / firm-minded"
+      },
+      {
+        "sa": "तत्र",
+        "iast": "tatra",
+        "ph": "tatra",
+        "m": "thereat / in that change"
+      },
+      {
+        "sa": "न",
+        "iast": "na",
+        "ph": "na",
+        "m": "not"
+      },
+      {
+        "sa": "मुह्यति",
+        "iast": "muhyati",
+        "ph": "muhyati",
+        "m": "is bewildered / grieveth"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 14,
+    "sanskrit": "मात्रास्पर्शास्तु कौन्तेय शीतोष्णसुखदुःखदाः ।\nआगमापायिनोऽनित्यास्तांस्तितिक्षस्व भारत ॥ १४ ॥",
+    "iast": "mātrā-sparśās tu kaunteya śītoṣṇa-sukha-duḥkha-dāḥ |\nāgamāpāyino ’nityās tāṁs titikṣasva bhārata || 14 ||",
+    "phonetic": "maatraa-sparshaas tu kaunteya sheetoshna-sukha-duhkha-daah |\naagamaapaayino nityaas taams titikshasva bhaarata || 14 ||",
+    "trans1905": "The contacts of senses with their objects, O son of Kunti, giving cold and heat, pleasure and pain, they come and go, impermanent; endure them, O Bharata.",
+    "transModern": "O son of Kunti, the contact between the senses and their objects gives rise to fleeting sensations of heat and cold, pleasure and pain. They come and go and are impermanent. Learn to endure them patiently, O descendant of Bharata.",
+    "words": [
+      {
+        "sa": "मात्रा-स्पर्शाः",
+        "iast": "mātrā-sparśāḥ",
+        "ph": "maatraa-sparshaah",
+        "m": "contacts of senses with objects"
+      },
+      {
+        "sa": "तु",
+        "iast": "tu",
+        "ph": "tu",
+        "m": "indeed"
+      },
+      {
+        "sa": "कौन्तेय",
+        "iast": "kaunteya",
+        "ph": "kaunteya",
+        "m": "O son of Kunti"
+      },
+      {
+        "sa": "शीत-उष्ण-सुख-दुःख-दाः",
+        "iast": "śīta-uṣṇa-sukha-duḥkha-dāḥ",
+        "ph": "sheeta-ushna-sukha-duhkha-daah",
+        "m": "producers of cold, heat, pleasure and pain"
+      },
+      {
+        "sa": "आगम-अपायिनः",
+        "iast": "āgama-apāyinaḥ",
+        "ph": "aagama-apaayinah",
+        "m": "having beginning and end (appearing and disappearing)"
+      },
+      {
+        "sa": "अनित्याः",
+        "iast": "anityāḥ",
+        "ph": "anityaah",
+        "m": "impermanent / fleeting"
+      },
+      {
+        "sa": "तान्",
+        "iast": "tān",
+        "ph": "taan",
+        "m": "them"
+      },
+      {
+        "sa": "तितिक्षस्व",
+        "iast": "titikṣasva",
+        "ph": "titikshasva",
+        "m": "endure / bear thou"
+      },
+      {
+        "sa": "भारत",
+        "iast": "bhārata",
+        "ph": "bhaarata",
+        "m": "O descendant of Bharata"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 20,
+    "sanskrit": "न जायते म्रियते वा कदाचिन्नायं भूत्वा भविता वा न भूयः ।\nअजो नित्यः शाश्वतोऽयं पुराणो न हन्यते हन्यमाने शरीरे ॥ २० ॥",
+    "iast": "na jāyate mriyate vā kadācin nāyaṁ bhūtvā bhavitā vā na bhūyaḥ |\najo nityaḥ śāśvato ’yaṁ purāṇo na hanyate hanyamāne śarīre || 20 ||",
+    "phonetic": "na jaayate mriyate vaa kadaachin naayam bhootvaa bhavitaa vaa na bhooyah |\najo nityah shaashwato yam puraano na hanyate hanyamaane shareere || 20 ||",
+    "trans1905": "He is not born, nor doth he die; nor, having been, ceaseth he any more to be; unborn, perpetual, eternal and ancient, he is not slain when the body is slaughtered.",
+    "transModern": "For the soul there is never birth nor death at any time. He has not come to being, does not come into being, and will not cease to be. He is unborn, eternal, ever-existing, and primeval. He is not slain when the body is slain.",
+    "words": [
+      {
+        "sa": "न",
+        "iast": "na",
+        "ph": "na",
+        "m": "never / not"
+      },
+      {
+        "sa": "जायते",
+        "iast": "jāyate",
+        "ph": "jaayate",
+        "m": "is born"
+      },
+      {
+        "sa": "म्रियते",
+        "iast": "mriyate",
+        "ph": "mriyate",
+        "m": "dies"
+      },
+      {
+        "sa": "वा",
+        "iast": "vā",
+        "ph": "vaa",
+        "m": "or"
+      },
+      {
+        "sa": "कदाचित्",
+        "iast": "kadācit",
+        "ph": "kadaachit",
+        "m": "at any time"
+      },
+      {
+        "sa": "न",
+        "iast": "na",
+        "ph": "na",
+        "m": "not"
+      },
+      {
+        "sa": "अयम्",
+        "iast": "ayam",
+        "ph": "ayam",
+        "m": "this (soul)"
+      },
+      {
+        "sa": "भूत्वा",
+        "iast": "bhūtvā",
+        "ph": "bhootvaa",
+        "m": "having come to be"
+      },
+      {
+        "sa": "भविता",
+        "iast": "bhavitā",
+        "ph": "bhavitaa",
+        "m": "will come to be"
+      },
+      {
+        "sa": "वा",
+        "iast": "vā",
+        "ph": "vaa",
+        "m": "or"
+      },
+      {
+        "sa": "न",
+        "iast": "na",
+        "ph": "na",
+        "m": "not"
+      },
+      {
+        "sa": "भूयः",
+        "iast": "bhūyaḥ",
+        "ph": "bhooyah",
+        "m": "again"
+      },
+      {
+        "sa": "अजः",
+        "iast": "ajaḥ",
+        "ph": "ajah",
+        "m": "unborn"
+      },
+      {
+        "sa": "नित्यः",
+        "iast": "nityaḥ",
+        "ph": "nityah",
+        "m": "eternal / perpetual"
+      },
+      {
+        "sa": "शाश्वतः",
+        "iast": "śāśvataḥ",
+        "ph": "shaashwatah",
+        "m": "everlasting / changeless"
+      },
+      {
+        "sa": "अयम्",
+        "iast": "ayam",
+        "ph": "ayam",
+        "m": "this"
+      },
+      {
+        "sa": "पुराणः",
+        "iast": "purāṇaḥ",
+        "ph": "puraanah",
+        "m": "primeval / ancient"
+      },
+      {
+        "sa": "न",
+        "iast": "na",
+        "ph": "na",
+        "m": "not"
+      },
+      {
+        "sa": "हन्यते",
+        "iast": "hanyate",
+        "ph": "hanyate",
+        "m": "is killed / destroyed"
+      },
+      {
+        "sa": "हन्यमाने",
+        "iast": "hanyamāne",
+        "ph": "hanyamaane",
+        "m": "being killed"
+      },
+      {
+        "sa": "शरीरे",
+        "iast": "śarīre",
+        "ph": "shareere",
+        "m": "in the body"
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "verse": 47,
+    "sanskrit": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।\nमा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥ ४७ ॥",
+    "iast": "karmaṇy-evādhikāras te mā phaleṣu kadācana |\nmā karma-phala-hetur bhūr mā te saṅgo ’stv akarmaṇi || 47 ||",
+    "phonetic": "karmany-evaadhikaaras te maa phaleshu kadaachana |\nmaa karma-phala-hetur bhoor maa te sango stv akarmani || 47 ||",
+    "trans1905": "Thy business is with the action only, never with its fruits; so let not the fruit of action be thy motive, nor be thou to inaction attached.",
+    "transModern": "You have a right to perform your prescribed duties, but you are not entitled to the fruits of your actions. Never consider yourself the cause of results, nor be attached to inaction.",
+    "words": [
+      {
+        "sa": "कर्मणि",
+        "iast": "karmaṇi",
+        "ph": "karmani",
+        "m": "in action only"
+      },
+      {
+        "sa": "एव",
+        "iast": "eva",
+        "ph": "eva",
+        "m": "only / alone"
+      },
+      {
+        "sa": "अधिकारः",
+        "iast": "adhikāraḥ",
+        "ph": "adhikaarah",
+        "m": "right / entitlement"
+      },
+      {
+        "sa": "ते",
+        "iast": "te",
+        "ph": "te",
+        "m": "thy / your"
+      },
+      {
+        "sa": "मा",
+        "iast": "mā",
+        "ph": "maa",
+        "m": "not"
+      },
+      {
+        "sa": "फलेषु",
+        "iast": "phaleṣu",
+        "ph": "phaleshu",
+        "m": "in the fruits"
+      },
+      {
+        "sa": "कदाचन",
+        "iast": "kadācana",
+        "ph": "kadaachana",
+        "m": "at any time"
+      },
+      {
+        "sa": "कर्मफल-हेतुः",
+        "iast": "karmaphala-hetuḥ",
+        "ph": "karmaphala-hetuh",
+        "m": "motive for fruit of action"
+      },
+      {
+        "sa": "भूः",
+        "iast": "bhūḥ",
+        "ph": "bhooh",
+        "m": "be"
+      },
+      {
+        "sa": "सङ्गः",
+        "iast": "saṅgaḥ",
+        "ph": "sangah",
+        "m": "attachment"
+      },
+      {
+        "sa": "अस्तु",
+        "iast": "astu",
+        "ph": "astu",
+        "m": "let there be"
+      },
+      {
+        "sa": "अकर्मणि",
+        "iast": "akarmaṇi",
+        "ph": "akarmani",
+        "m": "in inaction"
+      }
+    ]
+  }
+]
