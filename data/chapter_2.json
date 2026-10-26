@@ -12,79 +12,92 @@
         "sa": "श्रीभगवान् उवाच",
         "iast": "śrī-bhagavān uvāca",
         "ph": "shree-bhagavaan uvaacha",
-        "m": "the Blessed Lord said"
+        "m": "the Blessed Lord said",
+        "line": 1
       },
       {
         "sa": "अशोच्यान्",
         "iast": "aśocyān",
         "ph": "ashochyaan",
-        "m": "that should not be grieved for"
+        "m": "that should not be grieved for",
+        "line": 1
       },
       {
         "sa": "अन्वशोचः",
         "iast": "anvaśocaḥ",
         "ph": "anvashocah",
-        "m": "thou hast grieved"
+        "m": "thou hast grieved",
+        "line": 1
       },
       {
         "sa": "त्वम्",
         "iast": "tvam",
         "ph": "tvam",
-        "m": "thou"
+        "m": "thou",
+        "line": 1
       },
       {
         "sa": "प्रज्ञा-वादान्",
         "iast": "prajñā-vādān",
         "ph": "prajnaa-vaadaan",
-        "m": "words of wisdom"
+        "m": "words of wisdom",
+        "line": 1
       },
       {
         "sa": "च",
         "iast": "ca",
         "ph": "ca",
-        "m": "and"
+        "m": "and",
+        "line": 1
       },
       {
         "sa": "भाषसे",
         "iast": "bhāṣase",
         "ph": "bhaashase",
-        "m": "talkest"
+        "m": "talkest",
+        "line": 1
       },
       {
         "sa": "गतासून्",
         "iast": "gatāsūn",
         "ph": "gataasoon",
-        "m": "dead (whose life is gone)"
+        "m": "dead (whose life is gone)",
+        "line": 2
       },
       {
         "sa": "अगतासून्",
         "iast": "agatāsūn",
         "ph": "agataasoon",
-        "m": "living (whose life is not gone)"
+        "m": "living (whose life is not gone)",
+        "line": 2
       },
       {
         "sa": "च",
         "iast": "ca",
         "ph": "ca",
-        "m": "and"
+        "m": "and",
+        "line": 2
       },
       {
         "sa": "न",
         "iast": "na",
         "ph": "na",
-        "m": "not"
+        "m": "not",
+        "line": 2
       },
       {
         "sa": "अनुशोचन्ति",
         "iast": "anuśocanti",
         "ph": "anushocanti",
-        "m": "grieve"
+        "m": "grieve",
+        "line": 2
       },
       {
         "sa": "पण्डिताः",
         "iast": "paṇḍitāḥ",
         "ph": "panditaah",
-        "m": "the wise / learned"
+        "m": "the wise / learned",
+        "line": 2
       }
     ]
   },
@@ -101,97 +114,113 @@
         "sa": "न",
         "iast": "na",
         "ph": "na",
-        "m": "not"
+        "m": "not",
+        "line": 1
       },
       {
         "sa": "तु",
         "iast": "tu",
         "ph": "tu",
-        "m": "indeed / verily"
+        "m": "indeed / verily",
+        "line": 1
       },
       {
         "sa": "एव",
         "iast": "eva",
         "ph": "eva",
-        "m": "also / alone"
+        "m": "also / alone",
+        "line": 1
       },
       {
         "sa": "अहम्",
         "iast": "aham",
         "ph": "aham",
-        "m": "I"
+        "m": "I",
+        "line": 1
       },
       {
         "sa": "जातु",
         "iast": "jātu",
         "ph": "jaatu",
-        "m": "at any time"
+        "m": "at any time",
+        "line": 1
       },
       {
         "sa": "न",
         "iast": "na",
         "ph": "na",
-        "m": "not"
+        "m": "not",
+        "line": 1
       },
       {
         "sa": "आसम्",
         "iast": "āsam",
         "ph": "aasam",
-        "m": "was"
+        "m": "was",
+        "line": 1
       },
       {
         "sa": "त्वम्",
         "iast": "tvam",
         "ph": "tvam",
-        "m": "thou"
+        "m": "thou",
+        "line": 1
       },
       {
         "sa": "इमे",
         "iast": "ime",
         "ph": "ime",
-        "m": "these"
+        "m": "these",
+        "line": 1
       },
       {
         "sa": "जनाधिपाः",
         "iast": "janādhipāḥ",
         "ph": "janaadhipaah",
-        "m": "rulers of men / kings"
+        "m": "rulers of men / kings",
+        "line": 1
       },
       {
         "sa": "च",
         "iast": "ca",
         "ph": "ca",
-        "m": "and"
+        "m": "and",
+        "line": 2
       },
       {
         "sa": "न",
         "iast": "na",
         "ph": "na",
-        "m": "not"
+        "m": "not",
+        "line": 2
       },
       {
         "sa": "भविष्यामः",
         "iast": "bhaviṣyāmaḥ",
         "ph": "bhavishyaamah",
-        "m": "shall be / exist"
+        "m": "shall be / exist",
+        "line": 2
       },
       {
         "sa": "सर्वे",
         "iast": "sarve",
         "ph": "sarve",
-        "m": "all"
+        "m": "all",
+        "line": 2
       },
       {
         "sa": "वयम्",
         "iast": "vayam",
         "ph": "vayam",
-        "m": "we"
+        "m": "we",
+        "line": 2
       },
       {
         "sa": "अतः परम्",
         "iast": "ataḥ param",
         "ph": "atah param",
-        "m": "hereafter"
+        "m": "hereafter",
+        "line": 2
       }
     ]
   },
@@ -208,79 +237,92 @@
         "sa": "देहिनः",
         "iast": "dehinaḥ",
         "ph": "dehinah",
-        "m": "of the embodied (soul)"
+        "m": "of the embodied (soul)",
+        "line": 1
       },
       {
         "sa": "अस्मिन्",
         "iast": "asmin",
         "ph": "asmin",
-        "m": "in this"
+        "m": "in this",
+        "line": 1
       },
       {
         "sa": "यथा",
         "iast": "yathā",
         "ph": "yathaa",
-        "m": "as / just as"
+        "m": "as / just as",
+        "line": 1
       },
       {
         "sa": "देहे",
         "iast": "dehe",
         "ph": "dehe",
-        "m": "in body"
+        "m": "in body",
+        "line": 1
       },
       {
         "sa": "कौमारम्",
         "iast": "kaumāram",
         "ph": "kaumaaram",
-        "m": "childhood"
+        "m": "childhood",
+        "line": 1
       },
       {
         "sa": "यौवनम्",
         "iast": "yauvanam",
         "ph": "yauvanam",
-        "m": "youth"
+        "m": "youth",
+        "line": 1
       },
       {
         "sa": "जरा",
         "iast": "jarā",
         "ph": "jaraa",
-        "m": "age / decay"
+        "m": "age / decay",
+        "line": 1
       },
       {
         "sa": "तथा",
         "iast": "tathā",
         "ph": "tathaa",
-        "m": "so / similarly"
+        "m": "so / similarly",
+        "line": 2
       },
       {
         "sa": "देहान्तर-प्राप्तिः",
         "iast": "dehāntara-prāptiḥ",
         "ph": "dehaantara-praaptih",
-        "m": "the obtaining of another body"
+        "m": "the obtaining of another body",
+        "line": 2
       },
       {
         "sa": "धीरः",
         "iast": "dhīraḥ",
         "ph": "dheerah",
-        "m": "the steadfast / firm-minded"
+        "m": "the steadfast / firm-minded",
+        "line": 2
       },
       {
         "sa": "तत्र",
         "iast": "tatra",
         "ph": "tatra",
-        "m": "thereat / in that change"
+        "m": "thereat / in that change",
+        "line": 2
       },
       {
         "sa": "न",
         "iast": "na",
         "ph": "na",
-        "m": "not"
+        "m": "not",
+        "line": 2
       },
       {
         "sa": "मुह्यति",
         "iast": "muhyati",
         "ph": "muhyati",
-        "m": "is bewildered / grieveth"
+        "m": "is bewildered / grieveth",
+        "line": 2
       }
     ]
   },
@@ -297,55 +339,64 @@
         "sa": "मात्रा-स्पर्शाः",
         "iast": "mātrā-sparśāḥ",
         "ph": "maatraa-sparshaah",
-        "m": "contacts of senses with objects"
+        "m": "contacts of senses with objects",
+        "line": 1
       },
       {
         "sa": "तु",
         "iast": "tu",
         "ph": "tu",
-        "m": "indeed"
+        "m": "indeed",
+        "line": 1
       },
       {
         "sa": "कौन्तेय",
         "iast": "kaunteya",
         "ph": "kaunteya",
-        "m": "O son of Kunti"
+        "m": "O son of Kunti",
+        "line": 1
       },
       {
         "sa": "शीत-उष्ण-सुख-दुःख-दाः",
         "iast": "śīta-uṣṇa-sukha-duḥkha-dāḥ",
         "ph": "sheeta-ushna-sukha-duhkha-daah",
-        "m": "producers of cold, heat, pleasure and pain"
+        "m": "producers of cold, heat, pleasure and pain",
+        "line": 1
       },
       {
         "sa": "आगम-अपायिनः",
         "iast": "āgama-apāyinaḥ",
         "ph": "aagama-apaayinah",
-        "m": "having beginning and end (appearing and disappearing)"
+        "m": "having beginning and end (appearing and disappearing)",
+        "line": 2
       },
       {
         "sa": "अनित्याः",
         "iast": "anityāḥ",
         "ph": "anityaah",
-        "m": "impermanent / fleeting"
+        "m": "impermanent / fleeting",
+        "line": 2
       },
       {
         "sa": "तान्",
         "iast": "tān",
         "ph": "taan",
-        "m": "them"
+        "m": "them",
+        "line": 2
       },
       {
         "sa": "तितिक्षस्व",
         "iast": "titikṣasva",
         "ph": "titikshasva",
-        "m": "endure / bear thou"
+        "m": "endure / bear thou",
+        "line": 2
       },
       {
         "sa": "भारत",
         "iast": "bhārata",
         "ph": "bhaarata",
-        "m": "O descendant of Bharata"
+        "m": "O descendant of Bharata",
+        "line": 2
       }
     ]
   },
@@ -362,127 +413,148 @@
         "sa": "न",
         "iast": "na",
         "ph": "na",
-        "m": "never / not"
+        "m": "never / not",
+        "line": 1
       },
       {
         "sa": "जायते",
         "iast": "jāyate",
         "ph": "jaayate",
-        "m": "is born"
+        "m": "is born",
+        "line": 1
       },
       {
         "sa": "म्रियते",
         "iast": "mriyate",
         "ph": "mriyate",
-        "m": "dies"
+        "m": "dies",
+        "line": 1
       },
       {
         "sa": "वा",
         "iast": "vā",
         "ph": "vaa",
-        "m": "or"
+        "m": "or",
+        "line": 1
       },
       {
         "sa": "कदाचित्",
         "iast": "kadācit",
         "ph": "kadaachit",
-        "m": "at any time"
+        "m": "at any time",
+        "line": 1
       },
       {
         "sa": "न",
         "iast": "na",
         "ph": "na",
-        "m": "not"
+        "m": "not",
+        "line": 1
       },
       {
         "sa": "अयम्",
         "iast": "ayam",
         "ph": "ayam",
-        "m": "this (soul)"
+        "m": "this (soul)",
+        "line": 1
       },
       {
         "sa": "भूत्वा",
         "iast": "bhūtvā",
         "ph": "bhootvaa",
-        "m": "having come to be"
+        "m": "having come to be",
+        "line": 1
       },
       {
         "sa": "भविता",
         "iast": "bhavitā",
         "ph": "bhavitaa",
-        "m": "will come to be"
+        "m": "will come to be",
+        "line": 1
       },
       {
         "sa": "वा",
         "iast": "vā",
         "ph": "vaa",
-        "m": "or"
+        "m": "or",
+        "line": 1
       },
       {
         "sa": "न",
         "iast": "na",
         "ph": "na",
-        "m": "not"
+        "m": "not",
+        "line": 1
       },
       {
         "sa": "भूयः",
         "iast": "bhūyaḥ",
         "ph": "bhooyah",
-        "m": "again"
+        "m": "again",
+        "line": 1
       },
       {
         "sa": "अजः",
         "iast": "ajaḥ",
         "ph": "ajah",
-        "m": "unborn"
+        "m": "unborn",
+        "line": 2
       },
       {
         "sa": "नित्यः",
         "iast": "nityaḥ",
         "ph": "nityah",
-        "m": "eternal / perpetual"
+        "m": "eternal / perpetual",
+        "line": 2
       },
       {
         "sa": "शाश्वतः",
         "iast": "śāśvataḥ",
         "ph": "shaashwatah",
-        "m": "everlasting / changeless"
+        "m": "everlasting / changeless",
+        "line": 2
       },
       {
         "sa": "अयम्",
         "iast": "ayam",
         "ph": "ayam",
-        "m": "this"
+        "m": "this",
+        "line": 2
       },
       {
         "sa": "पुराणः",
         "iast": "purāṇaḥ",
         "ph": "puraanah",
-        "m": "primeval / ancient"
+        "m": "primeval / ancient",
+        "line": 2
       },
       {
         "sa": "न",
         "iast": "na",
         "ph": "na",
-        "m": "not"
+        "m": "not",
+        "line": 2
       },
       {
         "sa": "हन्यते",
         "iast": "hanyate",
         "ph": "hanyate",
-        "m": "is killed / destroyed"
+        "m": "is killed / destroyed",
+        "line": 2
       },
       {
         "sa": "हन्यमाने",
         "iast": "hanyamāne",
         "ph": "hanyamaane",
-        "m": "being killed"
+        "m": "being killed",
+        "line": 2
       },
       {
         "sa": "शरीरे",
         "iast": "śarīre",
         "ph": "shareere",
-        "m": "in the body"
+        "m": "in the body",
+        "line": 2
       }
     ]
   },
@@ -499,73 +571,85 @@
         "sa": "कर्मणि",
         "iast": "karmaṇi",
         "ph": "karmani",
-        "m": "in action only"
+        "m": "in action only",
+        "line": 1
       },
       {
         "sa": "एव",
         "iast": "eva",
         "ph": "eva",
-        "m": "only / alone"
+        "m": "only / alone",
+        "line": 1
       },
       {
         "sa": "अधिकारः",
         "iast": "adhikāraḥ",
         "ph": "adhikaarah",
-        "m": "right / entitlement"
+        "m": "right / entitlement",
+        "line": 1
       },
       {
         "sa": "ते",
         "iast": "te",
         "ph": "te",
-        "m": "thy / your"
+        "m": "thy / your",
+        "line": 1
       },
       {
         "sa": "मा",
         "iast": "mā",
         "ph": "maa",
-        "m": "not"
+        "m": "not",
+        "line": 1
       },
       {
         "sa": "फलेषु",
         "iast": "phaleṣu",
         "ph": "phaleshu",
-        "m": "in the fruits"
+        "m": "in the fruits",
+        "line": 1
       },
       {
         "sa": "कदाचन",
         "iast": "kadācana",
         "ph": "kadaachana",
-        "m": "at any time"
+        "m": "at any time",
+        "line": 1
       },
       {
         "sa": "कर्मफल-हेतुः",
         "iast": "karmaphala-hetuḥ",
         "ph": "karmaphala-hetuh",
-        "m": "motive for fruit of action"
+        "m": "motive for fruit of action",
+        "line": 2
       },
       {
         "sa": "भूः",
         "iast": "bhūḥ",
         "ph": "bhooh",
-        "m": "be"
+        "m": "be",
+        "line": 2
       },
       {
         "sa": "सङ्गः",
         "iast": "saṅgaḥ",
         "ph": "sangah",
-        "m": "attachment"
+        "m": "attachment",
+        "line": 2
       },
       {
         "sa": "अस्तु",
         "iast": "astu",
         "ph": "astu",
-        "m": "let there be"
+        "m": "let there be",
+        "line": 2
       },
       {
         "sa": "अकर्मणि",
         "iast": "akarmaṇi",
         "ph": "akarmani",
-        "m": "in inaction"
+        "m": "in inaction",
+        "line": 2
       }
     ]
   }
