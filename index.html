@@ -1,1 +1,392 @@
+cat << 'EOF' > index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bhagavad Gita - Sacred Study Reader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Yatra+One&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0a0b0e;
+  --bg-card: rgba(23, 26, 33, 0.85);
+  --bg-subtle: rgba(255, 255, 255, 0.04);
+  --border-color: rgba(212, 175, 55, 0.22);
+  --border-highlight: rgba(212, 175, 55, 0.55);
+  --gold-primary: #e6ca65;
+  --gold-deep: #b38f2a;
+  --gold-glow: rgba(230, 202, 101, 0.35);
+  --text-main: #f0ede6;
+  --text-muted: #9e9ba4;
+  --text-subtle: #6c6974;
+  --saffron: #ff8c42;
+  --card-radius: 14px;
+  --font-body: 'Lora', serif;
+  --font-title: 'Cinzel', serif;
+  --font-sanskrit: 'Yatra One', cursive;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background-color: var(--bg-primary);
+  background-image: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 70%),
+                    radial-gradient(circle at 85% 85%, rgba(255, 140, 66, 0.06) 0%, transparent 60%);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+header {
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  background: rgba(10, 11, 14, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.9rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.brand { display: flex; align-items: center; gap: 0.85rem; }
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #000;
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+.brand-text h1 {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold-primary);
+}
+.brand-text p {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.nav-select-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  padding: 0.25rem 0.6rem;
+}
+select {
+  background: transparent;
+  border: none;
+  color: var(--gold-primary);
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  padding: 0.2rem 0.4rem;
+}
+select option { background: #13151b; color: #fff; }
+.btn {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.45rem 0.9rem;
+  border-radius: 20px;
+  font-family: var(--font-title);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.btn:hover {
+  border-color: var(--gold-primary);
+  background: rgba(230, 202, 101, 0.12);
+  color: var(--gold-primary);
+}
+.btn.active {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-deep));
+  color: #0b0c10;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+main {
+  flex: 1;
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+.script-selector-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(20, 22, 28, 0.7);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem;
+  border-radius: 30px;
+  width: fit-content;
+  margin: 0 auto;
+}
+.toggle-pill {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-family: var(--font-title);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.toggle-pill.active {
+  background: var(--gold-primary);
+  color: #000;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+.hero-verse-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--card-radius);
+  padding: 2.2rem 1.8rem;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  position: relative;
+}
+.verse-badge {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(212, 175, 55, 0.08);
+}
+.sanskrit-display {
+  font-family: var(--font-sanskrit);
+  font-size: 1.95rem;
+  line-height: 1.85;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+  margin-bottom: 1.2rem;
+}
+.translit-display {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--gold-primary);
+  font-style: italic;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.02em;
+}
+.audio-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-wrap: wrap;
+}
+.section-title {
+  font-family: var(--font-title);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-color), transparent);
+}
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.85rem;
+}
+.word-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.word-card:hover {
+  border-color: var(--gold-primary);
+  transform: translateY(-2px);
+}
+.word-sanskrit {
+  font-family: var(--font-sanskrit);
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 0.15rem;
+}
+.word-translit {
+  font-size: 0.82rem;
+  color: var(--gold-primary);
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+.word-meaning {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  line-height: 1.4;
+  border-top: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-top: 0.4rem;
+}
+.translations-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+@media (max-width: 768px) {
+  .translations-container { grid-template-columns: 1fr; }
+}
+.trans-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.trans-header {
+  font-family: var(--font-title);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--saffron);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.trans-text {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-main);
+}
+footer {
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-subtle);
+}
+</style>
+</head>
+<body>
 
+<header>
+<div class="brand">
+  <div class="brand-icon">ॐ</div>
+  <div class="brand-text">
+    <h1>Bhagavad Gita</h1>
+    <p>Sacred Study & Recitation Portal</p>
+  </div>
+</div>
+
+<div class="header-controls">
+  <div class="nav-select-group">
+    <label for="chapterSelect" style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Ch</label>
+    <select id="chapterSelect"></select>
+    <label for="verseSelect" style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">V</label>
+    <select id="verseSelect"></select>
+  </div>
+
+  <button id="tanpuraBtn" class="btn" onclick="toggleTanpura()">
+    <span>🎵 Tanpura</span>
+  </button>
+</div>
+</header>
+
+<main>
+<div class="script-selector-bar">
+  <button class="toggle-pill active" onclick="setScript('devanagari', this)">Devanagari</button>
+  <button class="toggle-pill" onclick="setScript('iast', this)">IAST (Academic)</button>
+  <button class="toggle-pill" onclick="setScript('phonetic', this)">Easy English (aa/sh)</button>
+</div>
+
+<section class="hero-verse-card">
+  <span class="verse-badge" id="verseBadge">Chapter 2 • Verse 13</span>
+  <div class="sanskrit-display" id="mainSanskrit">...</div>
+  <div class="translit-display" id="subTranslit">...</div>
+
+  <div class="audio-toolbar">
+    <button class="btn" onclick="chantCurrentVerse()">🔊 Recite Chanting</button>
+    <button class="btn" onclick="nextVerse()">Next Verse ➔</button>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">Word-for-Word Padachheda (1905 Babu Bhagavan Das)</div>
+  <div class="word-grid" id="wordGrid"></div>
+</section>
+
+<section class="translations-container">
+  <div class="trans-box">
+    <div class="trans-header">1905 Classic (Annie Besant)</div>
+    <div class="trans-text" id="trans1905">...</div>
+  </div>
+  <div class="trans-box">
+    <div class="trans-header">Modern Direct English</div>
+    <div class="trans-text" id="transModern">...</div>
+  </div>
+</section>
+</main>
+
+<footer>
+The Sacred Song Divine • Public Domain 1905 Edition & Study Commentary
+</footer>
+
+<script>
+const verseDatabase = {
+  "2-13": {
+    chapter: 2,
+    verse: 13,
+    sanskrit: "देहिनोऽस्मिन्यथा देहे कौमारं यौवनं जरा ।\nतथा देहान्तरप्राप्तिर्धीरस्तत्र न मुह्यति ॥ १३ ॥",
+    iast: "dehino ’smin yathā dehe kaumāraṁ yauvanaṁ jarā |\ntathā dehāntara-prāptir dhīras tatra na muhyati || 13 ||",
+    phonetic: "dehino smin yathaa dehe kaumaaram yauvanam jaraa |\ntathaa dehaantara-praaptir dheeras tatra na muhyati || 13 ||",
+    trans1905: "As the dweller in the body experienceth in the body childhood, youth, old age, so passeth he on to another body; the steadfast one grieveth not thereat.",
+    transModern: "Just as the embodied soul continuously passes in this body from childhood to youth to old age, it similarly passes into another body at death. The wise are not bewildered by this.",
+    words: [
+      { sa: "देहिनः", iast: "dehinaḥ", ph: "dehinah", m: "of the embodied (soul)" },
+      { sa: "अस्मिन्", iast: "asmin", ph: "asmin", m: "in this" },
+      { sa: "यथा", iast: "yathā", ph: "yathaa", m: "as / just as" },
+      {
