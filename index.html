@@ -10,7 +10,7 @@
   <style>
     :root {
       --bg-primary: #f6f1e5;
-      --bg-card: rgba(255, 253, 248, 0.94);
+      --bg-card: rgba(255, 253, 248, 0.95);
       --bg-subtle: rgba(184, 148, 77, 0.08);
       --border-color: #dfd2b8;
       --border-highlight: #b8944d;
@@ -44,7 +44,7 @@
     header {
       border-bottom: 1px solid var(--border-color);
       backdrop-filter: blur(12px);
-      background: rgba(250, 246, 237, 0.92);
+      background: rgba(250, 246, 237, 0.94);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -250,17 +250,73 @@
       height: 1px;
       background: linear-gradient(90deg, var(--border-highlight), transparent);
     }
+
+    /* Distinct Shloka Line Section Separators */
+    .shloka-line-section {
+      background: rgba(255, 253, 248, 0.85);
+      border: 1.5px solid var(--border-color);
+      border-radius: 14px;
+      padding: 1.4rem;
+      margin-bottom: 1.6rem;
+      box-shadow: 0 4px 15px rgba(110, 74, 6, 0.04);
+    }
+    .shloka-line-banner {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      padding-bottom: 0.9rem;
+      margin-bottom: 1.1rem;
+      border-bottom: 1.5px dashed var(--border-color);
+    }
+    .shloka-line-title {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: var(--font-title);
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--maroon);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .shloka-line-badge {
+      background: linear-gradient(135deg, #dfbe78, #b88b32);
+      color: #3d2605;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 0.18rem 0.65rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 1px 4px rgba(110, 74, 6, 0.15);
+    }
+    .shloka-line-sanskrit-quote {
+      font-family: var(--font-sanskrit);
+      font-size: 1.25rem;
+      color: #3a2e1e;
+      background: rgba(184, 148, 77, 0.08);
+      padding: 0.35rem 0.8rem;
+      border-radius: 8px;
+      border-left: 3px solid var(--gold-primary);
+      width: fit-content;
+    }
+    .shloka-line-translit-quote {
+      font-size: 0.9rem;
+      color: var(--gold-deep);
+      font-style: italic;
+      padding-left: 0.2rem;
+    }
+
     .word-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
       gap: 0.95rem;
     }
     .word-card {
-      background: var(--bg-card);
+      background: #ffffff;
       border: 1px solid var(--border-color);
       border-radius: 12px;
       padding: 1rem 1.1rem;
-      box-shadow: 0 3px 10px rgba(110, 74, 6, 0.04);
+      box-shadow: 0 3px 10px rgba(110, 74, 6, 0.03);
       transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
     }
     .word-card:hover {
@@ -375,8 +431,9 @@
     </section>
 
     <section>
-      <div class="section-title">Word-for-Word Padachheda (1905 Babu Bhagavan Das)</div>
-      <div class="word-grid" id="wordGrid"></div>
+      <div class="section-title">Word-for-Word Padachheda (Separated by Shloka Lines)</div>
+      <!-- Line by line grouped containers -->
+      <div id="wordLinesContainer"></div>
     </section>
 
     <section class="translations-container">
@@ -489,15 +546,69 @@
       document.getElementById('trans1905').innerText = v.trans1905 || '—';
       document.getElementById('transModern').innerText = v.transModern || '—';
 
-      const grid = document.getElementById('wordGrid');
-      grid.innerHTML = '';
-      (v.words || []).forEach(w => {
-        const card = document.createElement('div');
-        card.className = 'word-card';
-        card.innerHTML = '<div class="word-sanskrit">' + (currentScript === 'phonetic' ? w.ph : (currentScript === 'iast' ? w.iast : w.sa)) + '</div>' +
-                         '<div class="word-translit">' + (currentScript === 'phonetic' ? w.iast : w.ph) + '</div>' +
-                         '<div class="word-meaning">' + w.m + '</div>';
-        grid.appendChild(card);
+      // Parse individual Sanskrit & Transliteration lines
+      const saLines = (v.sanskrit || '').split('\n').filter(l => l.trim().length > 0);
+      const iaLines = (v.iast || '').split(/[|\n]/).map(l => l.trim()).filter(l => l.length > 0 && !/^\d+$/.test(l));
+
+      const wrapper = document.getElementById('wordLinesContainer');
+      wrapper.innerHTML = '';
+
+      const words = v.words || [];
+      const linesGrouped = {};
+
+      // If explicit line numbers are provided on words, use them.
+      // Otherwise, intelligently partition words between Line 1 and Line 2
+      const hasExplicitLines = words.some(w => w.line !== undefined);
+      if (hasExplicitLines) {
+        words.forEach(w => {
+          const lNum = w.line || 1;
+          if (!linesGrouped[lNum]) linesGrouped[lNum] = [];
+          linesGrouped[lNum].push(w);
+        });
+      } else {
+        // Automatically split into Line 1 and Line 2 by half
+        const midPoint = Math.ceil(words.length / 2);
+        linesGrouped[1] = words.slice(0, midPoint);
+        linesGrouped[2] = words.slice(midPoint);
+      }
+
+      const lineKeys = Object.keys(linesGrouped).sort((a,b) => parseInt(a)-parseInt(b));
+      lineKeys.forEach(lKey => {
+        const lineIdx = parseInt(lKey, 10);
+        const section = document.createElement('div');
+        section.className = 'shloka-line-section';
+
+        const quoteSa = saLines[lineIdx - 1] || '';
+        const quoteIa = iaLines[lineIdx - 1] || '';
+
+        const banner = document.createElement('div');
+        banner.className = 'shloka-line-banner';
+        banner.innerHTML = `
+          <div class="shloka-line-title">
+            <span class="shloka-line-badge">Line ${lineIdx}</span>
+            <span>${lineIdx === 1 ? 'First Half • Pūrvārdha' : 'Second Half • Uttarārdha'}</span>
+          </div>
+          ${quoteSa ? `<div class="shloka-line-sanskrit-quote">${quoteSa}</div>` : ''}
+          ${quoteIa ? `<div class="shloka-line-translit-quote">${quoteIa}</div>` : ''}
+        `;
+        section.appendChild(banner);
+
+        const grid = document.createElement('div');
+        grid.className = 'word-grid';
+
+        linesGrouped[lKey].forEach(w => {
+          const card = document.createElement('div');
+          card.className = 'word-card';
+          card.innerHTML = `
+            <div class="word-sanskrit">${currentScript === 'phonetic' ? w.ph : (currentScript === 'iast' ? w.iast : w.sa)}</div>
+            <div class="word-translit">${currentScript === 'phonetic' ? w.iast : w.ph}</div>
+            <div class="word-meaning">${w.m}</div>
+          `;
+          grid.appendChild(card);
+        });
+
+        section.appendChild(grid);
+        wrapper.appendChild(section);
       });
     }
 
@@ -506,7 +617,7 @@
       document.getElementById('subTranslit').innerText = 'Add data/chapter_' + currentChapter + '.json to GitHub repository.';
       document.getElementById('trans1905').innerText = '—';
       document.getElementById('transModern').innerText = '—';
-      document.getElementById('wordGrid').innerHTML = '';
+      document.getElementById('wordLinesContainer').innerHTML = '';
     }
 
     function chantCurrentVerse() {
