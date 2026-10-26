@@ -346,7 +346,7 @@
 
     <section class="hero-verse-card">
       <span class="verse-badge" id="verseBadge">Chapter 2 • Verse 13</span>
-      <div class="sanskrit-display" id="mainSanskrit">Loading verse...</div>
+      <div class="sanskrit-display" id="mainSanskrit">...</div>
       <div class="translit-display" id="subTranslit">...</div>
 
       <div class="audio-toolbar">
@@ -357,172 +357,71 @@
     </section>
 
     <section>
-      <div class="section-title">Word-for-Word Padachheda (Study Glossary)</div>
+      <div class="section-title">Word-for-Word Padachheda (1905 Babu Bhagavan Das)</div>
       <div class="word-grid" id="wordGrid"></div>
     </section>
 
     <section class="translations-container">
       <div class="trans-box">
-        <div class="trans-header">1905 Classic Translation</div>
+        <div class="trans-header">1905 Classic (Annie Besant)</div>
         <div class="trans-text" id="trans1905">...</div>
       </div>
       <div class="trans-box">
-        <div class="trans-header">Modern Direct Translation</div>
+        <div class="trans-header">Modern Direct English</div>
         <div class="trans-text" id="transModern">...</div>
       </div>
     </section>
   </main>
 
   <footer>
-    The Sacred Song Divine • Public Domain 1905 Edition & Continuous Study Portal
+    The Sacred Song Divine • Public Domain 1905 Edition & Study Commentary
   </footer>
 
   <script>
-    const CHAPTER_INFO = [
-      { num: 1, name: "1: Arjuna Vishada Yoga", count: 47 },
-      { num: 2, name: "2: Sankhya Yoga", count: 72 },
-      { num: 3, name: "3: Karma Yoga", count: 43 },
-      { num: 4, name: "4: Jnana Karma Sanyasa", count: 42 },
-      { num: 5, name: "5: Karma Sanyasa Yoga", count: 29 },
-      { num: 6, name: "6: Dhyana Yoga", count: 47 },
-      { num: 7, name: "7: Jnana Vijnana Yoga", count: 30 },
-      { num: 8, name: "8: Akshara Brahma Yoga", count: 28 },
-      { num: 9, name: "9: Raja Vidya Yoga", count: 34 },
-      { num: 10, name: "10: Vibhuti Yoga", count: 42 },
-      { num: 11, name: "11: Vishwarupa Darshana", count: 55 },
-      { num: 12, name: "12: Bhakti Yoga", count: 20 },
-      { num: 13, name: "13: Kshetra Kshetragjna", count: 35 },
-      { num: 14, name: "14: Gunatraya Vibhaga", count: 27 },
-      { num: 15, name: "15: Purushottama Yoga", count: 20 },
-      { num: 16, name: "16: Daivasura Sampad", count: 24 },
-      { num: 17, name: "17: Shraddhatraya Vibhaga", count: 28 },
-      { num: 18, name: "18: Moksha Sanyasa Yoga", count: 78 }
+    const CHAPTER_NAMES = [
+      "1: Arjuna Vishada Yoga", "2: Sankhya Yoga", "3: Karma Yoga", "4: Jnana Karma Sanyasa",
+      "5: Karma Sanyasa Yoga", "6: Dhyana Yoga", "7: Jnana Vijnana Yoga", "8: Akshara Brahma Yoga",
+      "9: Raja Vidya Yoga", "10: Vibhuti Yoga", "11: Vishwarupa Darshana", "12: Bhakti Yoga",
+      "13: Kshetra Kshetragjna", "14: Gunatraya Vibhaga", "15: Purushottama Yoga",
+      "16: Daivasura Sampad", "17: Shraddhatraya Vibhaga", "18: Moksha Sanyasa Yoga"
     ];
 
     let currentChapter = 2;
-    let currentVerseNum = 13;
-    let localChapterCache = {};
-    let verseMemoryCache = {};
-    let currentVerseData = null;
+    let currentVerseIndex = 0;
+    let currentChapterData = [];
     let currentScript = 'devanagari';
-
-    function iastToPhonetic(str) {
-      if (!str) return '';
-      return str
-        .replace(/ā/g, 'aa').replace(/Ā/g, 'Aa')
-        .replace(/ī/g, 'ee').replace(/Ī/g, 'Ee')
-        .replace(/ū/g, 'oo').replace(/Ū/g, 'Oo')
-        .replace(/ṛ/g, 'ri').replace(/Ṛ/g, 'Ri')
-        .replace(/ś/g, 'sh').replace(/Ś/g, 'Sh')
-        .replace(/ṣ/g, 'sh').replace(/Ṣ/g, 'Sh')
-        .replace(/ṁ/g, 'm').replace(/ṃ/g, 'm')
-        .replace(/ḥ/g, 'h')
-        .replace(/ṭ/g, 't').replace(/ḍ/g, 'd')
-        .replace(/ṇ/g, 'n').replace(/ñ/g, 'n').replace(/ṅ/g, 'n');
-    }
 
     function initSelectors() {
       const chSel = document.getElementById('chapterSelect');
-      chSel.innerHTML = CHAPTER_INFO.map(c => `<option value="${c.num}" ${c.num === currentChapter ? 'selected' : ''}>${c.name}</option>`).join('');
-      chSel.addEventListener('change', (e) => {
-        currentChapter = parseInt(e.target.value, 10);
-        updateVerseDropdown();
-        loadVerse(currentChapter, 1);
-      });
-
+      chSel.innerHTML = CHAPTER_NAMES.map((name, i) => '<option value="' + (i + 1) + '" ' + (i + 1 === currentChapter ? 'selected' : '') + '>' + name + '</option>').join('');
+      chSel.addEventListener('change', (e) => loadChapter(parseInt(e.target.value, 10)));
       document.getElementById('verseSelect').addEventListener('change', (e) => {
-        loadVerse(currentChapter, parseInt(e.target.value, 10));
+        currentVerseIndex = parseInt(e.target.value, 10);
+        renderCurrentVerse();
       });
-
-      updateVerseDropdown();
     }
 
-    function updateVerseDropdown() {
-      const ch = CHAPTER_INFO.find(c => c.num === currentChapter);
-      const vSel = document.getElementById('verseSelect');
-      let options = '';
-      for (let i = 1; i <= ch.count; i++) {
-        options += `<option value="${i}" ${i === currentVerseNum ? 'selected' : ''}>${i}</option>`;
-      }
-      vSel.innerHTML = options;
-    }
-
-    async function loadVerse(ch, v) {
-      currentChapter = ch;
-      currentVerseNum = v;
-      document.getElementById('chapterSelect').value = ch;
-      document.getElementById('verseSelect').value = v;
-
-      const cacheKey = `${ch}_${v}`;
-      if (verseMemoryCache[cacheKey]) {
-        currentVerseData = verseMemoryCache[cacheKey];
-        renderCurrentVerse();
-        return;
-      }
-
-      // Check if local file exists for chapter
-      if (localChapterCache[ch] === undefined) {
-        try {
-          const res = await fetch(`./data/chapter_${ch}.json`);
-          if (res.ok) {
-            localChapterCache[ch] = await res.json();
-          } else {
-            localChapterCache[ch] = null;
-          }
-        } catch (e) {
-          localChapterCache[ch] = null;
-        }
-      }
-
-      if (localChapterCache[ch]) {
-        const localMatch = localChapterCache[ch].find(item => item.verse === v);
-        if (localMatch) {
-          verseMemoryCache[cacheKey] = localMatch;
-          currentVerseData = localMatch;
-          renderCurrentVerse();
-          return;
-        }
-      }
-
-      // Dynamic Cloud Fallback from Vedic Scriptures API
+    async function loadChapter(chNum) {
+      currentChapter = chNum;
       try {
-        document.getElementById('mainSanskrit').innerText = 'Loading verse...';
-        const res = await fetch(`https://vedicscriptures.github.io/slok/${ch}/${v}`);
-        if (!res.ok) throw new Error('API fetch error');
-        const apiData = await res.json();
+        const res = await fetch('./data/chapter_' + chNum + '.json');
+        if (!res.ok) throw new Error('File not found');
+        currentChapterData = await res.json();
+      } catch (e) {
+        console.warn('Could not load ./data/chapter_' + chNum + '.json', e);
+        currentChapterData = [];
+      }
 
-        const wordsArray = [];
-        const slokWords = (apiData.slok || '').split(/\s+/).filter(w => w.length > 0 && !/[।॥\d]/.test(w));
-        const translitWords = (apiData.transliteration || '').split(/\s+/).filter(w => w.length > 0 && !/[|॥\d]/.test(w));
-
-        for (let i = 0; i < slokWords.length; i++) {
-          const s = slokWords[i] || '';
-          const ia = translitWords[i] || s;
-          wordsArray.push({
-            sa: s,
-            iast: ia,
-            ph: iastToPhonetic(ia),
-            m: 'Study Token'
-          });
-        }
-
-        const parsedData = {
-          chapter: ch,
-          verse: v,
-          sanskrit: apiData.slok || '',
-          iast: apiData.transliteration || '',
-          phonetic: iastToPhonetic(apiData.transliteration || ''),
-          trans1905: (apiData.purohit && apiData.purohit.et) || (apiData.siva && apiData.siva.et) || '—',
-          transModern: (apiData.tej && apiData.tej.ht) || (apiData.san && apiData.san.et) || (apiData.adi && apiData.adi.et) || (apiData.siva && apiData.siva.et) || '—',
-          words: wordsArray
-        };
-
-        verseMemoryCache[cacheKey] = parsedData;
-        currentVerseData = parsedData;
+      const vSel = document.getElementById('verseSelect');
+      if (currentChapterData.length > 0) {
+        vSel.innerHTML = currentChapterData.map((v, i) => '<option value="' + i + '">' + v.verse + '</option>').join('');
+        const preferredIndex = currentChapterData.findIndex(v => v.verse === 13);
+        currentVerseIndex = preferredIndex !== -1 ? preferredIndex : 0;
+        vSel.value = currentVerseIndex;
         renderCurrentVerse();
-      } catch (err) {
-        document.getElementById('mainSanskrit').innerText = 'Unable to load verse.';
-        document.getElementById('subTranslit').innerText = 'Please check internet connection or repository data.';
+      } else {
+        vSel.innerHTML = '<option value="0">—</option>';
+        clearDisplay();
       }
     }
 
@@ -534,28 +433,26 @@
     }
 
     function prevVerse() {
-      if (currentVerseNum > 1) {
-        loadVerse(currentChapter, currentVerseNum - 1);
-      } else if (currentChapter > 1) {
-        const prevCh = CHAPTER_INFO.find(c => c.num === currentChapter - 1);
-        loadVerse(prevCh.num, prevCh.count);
+      if (currentVerseIndex > 0) {
+        currentVerseIndex--;
+        document.getElementById('verseSelect').value = currentVerseIndex;
+        renderCurrentVerse();
       }
     }
 
     function nextVerse() {
-      const ch = CHAPTER_INFO.find(c => c.num === currentChapter);
-      if (currentVerseNum < ch.count) {
-        loadVerse(currentChapter, currentVerseNum + 1);
-      } else if (currentChapter < 18) {
-        loadVerse(currentChapter + 1, 1);
+      if (currentVerseIndex < currentChapterData.length - 1) {
+        currentVerseIndex++;
+        document.getElementById('verseSelect').value = currentVerseIndex;
+        renderCurrentVerse();
       }
     }
 
     function renderCurrentVerse() {
-      const v = currentVerseData;
+      const v = currentChapterData[currentVerseIndex];
       if (!v) return;
 
-      document.getElementById('verseBadge').innerText = `Chapter ${v.chapter} • Verse ${v.verse}`;
+      document.getElementById('verseBadge').innerText = 'Chapter ' + v.chapter + ' • Verse ' + v.verse;
 
       const sanskritEl = document.getElementById('mainSanskrit');
       const translitEl = document.getElementById('subTranslit');
@@ -579,19 +476,26 @@
       (v.words || []).forEach(w => {
         const card = document.createElement('div');
         card.className = 'word-card';
-        card.innerHTML = `
-          <div class="word-sanskrit">${currentScript === 'phonetic' ? w.ph : (currentScript === 'iast' ? w.iast : w.sa)}</div>
-          <div class="word-translit">${currentScript === 'phonetic' ? w.iast : w.ph}</div>
-          <div class="word-meaning">${w.m}</div>
-        `;
+        card.innerHTML = '<div class="word-sanskrit">' + (currentScript === 'phonetic' ? w.ph : (currentScript === 'iast' ? w.iast : w.sa)) + '</div>' +
+                         '<div class="word-translit">' + (currentScript === 'phonetic' ? w.iast : w.ph) + '</div>' +
+                         '<div class="word-meaning">' + w.m + '</div>';
         grid.appendChild(card);
       });
     }
 
+    function clearDisplay() {
+      document.getElementById('mainSanskrit').innerText = 'No verses loaded for this chapter yet.';
+      document.getElementById('subTranslit').innerText = 'Add data/chapter_' + currentChapter + '.json to GitHub repository.';
+      document.getElementById('trans1905').innerText = '—';
+      document.getElementById('transModern').innerText = '—';
+      document.getElementById('wordGrid').innerHTML = '';
+    }
+
     function chantCurrentVerse() {
       window.speechSynthesis.cancel();
-      if (!currentVerseData) return;
-      const utter = new SpeechSynthesisUtterance(currentVerseData.iast.replace(/[|॥\d]/g, ''));
+      const v = currentChapterData[currentVerseIndex];
+      if (!v) return;
+      const utter = new SpeechSynthesisUtterance(v.iast.replace(/[|॥\d]/g, ''));
       utter.rate = 0.85;
       utter.pitch = 0.95;
       window.speechSynthesis.speak(utter);
@@ -640,7 +544,7 @@
     }
 
     initSelectors();
-    loadVerse(2, 13);
+    loadChapter(2);
   </script>
 </body>
 </html>
